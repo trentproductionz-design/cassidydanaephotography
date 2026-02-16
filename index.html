@@ -1360,6 +1360,7 @@
             animation: fadeInUp 1s ease-out forwards;
         }
     </style>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -1657,6 +1658,16 @@
     </footer>
 
     <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on('init', user => {
+                if (!user) {
+                    window.netlifyIdentity.on('login', () => {
+                        document.location.href = '/admin/';
+                    });
+                }
+            });
+        }
+
         // Mobile menu toggle
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
