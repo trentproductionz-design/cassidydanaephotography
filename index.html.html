@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassidy Danae Photography | Destination Wedding Photographer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ivory: #FAF7F2;
+            --charcoal: #2B2B2B;
+            --soft-black: #1A1A1A;
+            --warm-grey: #8B8680;
+            --accent-gold: #C9A96E;
+            --newsprint: #E8E4DB;
+            --serif: 'Cormorant Garamond', serif;
+            --display: 'Playfair Display', serif;
+            --body: 'EB Garamond', serif;
+            --sans: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--ivory);
+            color: var(--charcoal);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(250, 247, 242, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 3rem;
+            border-bottom: 2px solid var(--soft-black);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .issue-date {
+            font-family: var(--sans);
+            font-size: 0.65rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--warm-grey);
+            border-right: 1px solid var(--warm-grey);
+            padding-right: 2rem;
+        }
+
+        .logo {
+            font-family: var(--display);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--soft-black);
+            text-transform: uppercase;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-decoration: none;
+            color: var(--charcoal);
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            font-size: 1rem;
+            color: var(--charcoal);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--ivory) 0%, var(--newsprint) 100%);
+            border-bottom: 3px solid var(--soft-black);
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 1200px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .hero-edition {
+            font-family: var(--sans);
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: var(--warm-grey);
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 1.4s ease-out;
+            border-top: 1px solid var(--warm-grey);
+            border-bottom: 1px solid var(--warm-grey);
+            display: inline-block;
+            padding: 0.5rem 2rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.4s ease-out;
+        }
+
+        .hero-title {
+            font-family: var(--display);
+            font-size: clamp(4rem, 12vw, 9rem);
+            font-weight: 700;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            color: var(--soft-black);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-family: var(--body);
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--charcoal);
+            letter-spacing: 0.02em;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 1.6s ease-out;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 2rem;
+            text-align: left;
+        }
+
+        .hero-byline {
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--warm-grey);
+            margin-top: 2rem;
+            animation: fadeInUp 1.8s ease-out;
+        }
+
+        /* Featured Story Section - Editorial Layout */
+        .featured-story {
+            background: var(--ivory);
+            padding: 8rem 5%;
+            border-bottom: 3px solid var(--soft-black);
+        }
+
+        .featured-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .featured-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--soft-black);
+        }
+
+        .featured-category {
+            font-family: var(--sans);
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .featured-headline {
+            font-family: var(--display);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--soft-black);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .featured-deck {
+            font-family: var(--body);
+            font-size: 1.3rem;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--charcoal);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .featured-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .featured-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .featured-image-large {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border: 1px solid var(--soft-black);
+        }
+
+        .featured-caption {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: var(--warm-grey);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .featured-text {
+            columns: 2;
+            column-gap: 3rem;
+            font-family: var(--body);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+            text-align: justify;
+        }
+
+        .featured-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-text p:first-child::first-letter {
+            font-family: var(--display);
+            font-size: 4.5rem;
+            line-height: 0.8;
+            float: left;
+            padding: 0.1rem 0.5rem 0 0;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .featured-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .pull-quote {
+            background: var(--soft-black);
+            color: var(--ivory);
+            padding: 3rem 2rem;
+            position: relative;
+        }
+
+        .pull-quote::before {
+            content: '"';
+            font-family: var(--display);
+            font-size: 8rem;
+            position: absolute;
+            top: -1rem;
+            left: 1rem;
+            color: var(--accent-gold);
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .pull-quote-text {
+            font-family: var(--display);
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.4;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sidebar-stat {
+            border: 2px solid var(--soft-black);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--display);
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            margin-top: 0.5rem;
+        }
+
+        .sidebar-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border: 1px solid var(--soft-black);
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 5%;
+            background: var(--newsprint);
+            border-bottom: 3px solid var(--soft-black);
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .about-image-col {
+            position: sticky;
+            top: 150px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border: 1px solid var(--soft-black);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+
+        .image-credit {
+            font-family: var(--sans);
+            font-size: 0.65rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--warm-grey);
+            margin-top: 0.75rem;
+            text-align: right;
+        }
+
+        .about-content {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        .section-number {
+            font-family: var(--display);
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            line-height: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--soft-black);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--soft-black);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .about-title {
+            font-family: var(--display);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 2rem;
+            color: var(--soft-black);
+            text-transform: uppercase;
+        }
+
+        .about-text {
+            font-family: var(--body);
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.9;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .about-text:first-of-type::first-letter {
+            font-family: var(--display);
+            font-size: 3.5rem;
+            line-height: 0.8;
+            float: left;
+            padding: 0.1rem 0.5rem 0 0;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .about-highlight {
+            background: var(--soft-black);
+            color: var(--ivory);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .about-highlight p {
+            font-family: var(--body);
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .signature {
+            font-family: var(--display);
+            font-size: 2.5rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--charcoal);
+            margin-top: 2rem;
+            text-align: right;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--ivory);
+            padding: 8rem 5%;
+            border-bottom: 3px solid var(--soft-black);
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--soft-black);
+        }
+
+        .services-number {
+            font-family: var(--display);
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            line-height: 0.8;
+        }
+
+        .services-title {
+            font-family: var(--display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--soft-black);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .services-subtitle {
+            font-family: var(--body);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            letter-spacing: 0.02em;
+            font-style: italic;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        .service-card {
+            border: 1px solid var(--soft-black);
+            padding: 3rem 2.5rem;
+            transition: all 0.4s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+            position: relative;
+            background: var(--ivory);
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .service-card:hover {
+            background: var(--soft-black);
+            color: var(--ivory);
+            z-index: 10;
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .service-card::before {
+            content: attr(data-number);
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-family: var(--display);
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            opacity: 0.15;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--accent-gold);
+        }
+
+        .service-title {
+            font-family: var(--display);
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .service-description {
+            font-family: var(--body);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--charcoal);
+        }
+
+        .service-card:hover .service-description {
+            color: var(--ivory);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 8rem 5%;
+            background: var(--soft-black);
+            color: var(--ivory);
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--ivory);
+        }
+
+        .gallery-number {
+            font-family: var(--display);
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            opacity: 0.3;
+            line-height: 0.8;
+        }
+
+        .gallery-title {
+            font-family: var(--display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--ivory);
+            text-transform: uppercase;
+        }
+
+        .gallery-deck {
+            font-family: var(--body);
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--warm-grey);
+            margin-top: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(0.95);
+            animation: fadeInScale 0.8s ease-out forwards;
+            border: 1px solid var(--ivory);
+        }
+
+        .gallery-item:nth-child(1) { 
+            grid-column: span 8;
+            grid-row: span 2;
+            animation-delay: 0.1s; 
+        }
+        .gallery-item:nth-child(2) { 
+            grid-column: span 4;
+            animation-delay: 0.2s; 
+        }
+        .gallery-item:nth-child(3) { 
+            grid-column: span 4;
+            animation-delay: 0.3s; 
+        }
+        .gallery-item:nth-child(4) { 
+            grid-column: span 5;
+            grid-row: span 2;
+            animation-delay: 0.4s; 
+        }
+        .gallery-item:nth-child(5) { 
+            grid-column: span 7;
+            animation-delay: 0.5s; 
+        }
+        .gallery-item:nth-child(6) { 
+            grid-column: span 7;
+            animation-delay: 0.6s; 
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease, filter 0.6s ease;
+            min-height: 300px;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+            filter: grayscale(0.3);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26, 26, 26, 0.95), transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-text {
+            font-family: var(--display);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--ivory);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-location {
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--newsprint);
+            padding: 8rem 5%;
+            border-bottom: 3px solid var(--soft-black);
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--soft-black);
+        }
+
+        .testimonials-number {
+            font-family: var(--display);
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            line-height: 0.8;
+        }
+
+        .testimonials-title {
+            font-family: var(--display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--soft-black);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .testimonials-deck {
+            font-family: var(--body);
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--charcoal);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            gap: 4rem;
+        }
+
+        .testimonial {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--soft-black);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .testimonial:nth-child(1) { animation-delay: 0.2s; }
+        .testimonial:nth-child(2) { animation-delay: 0.4s; }
+
+        .testimonial-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .testimonial-author {
+            font-family: var(--display);
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: var(--soft-black);
+            line-height: 1.2;
+        }
+
+        .testimonial-date {
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--warm-grey);
+        }
+
+        .testimonial-location {
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            font-weight: 300;
+            color: var(--charcoal);
+            font-style: italic;
+        }
+
+        .testimonial-content {
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-family: var(--body);
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--charcoal);
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-family: var(--display);
+            font-size: 6rem;
+            position: absolute;
+            top: -2rem;
+            left: -1rem;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--ivory);
+            padding: 8rem 5%;
+            text-align: center;
+            border-bottom: 3px solid var(--soft-black);
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-number {
+            font-family: var(--display);
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            line-height: 0.8;
+        }
+
+        .contact-title {
+            font-family: var(--display);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            color: var(--soft-black);
+        }
+
+        .contact-text {
+            font-family: var(--body);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--charcoal);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.5rem 4rem;
+            font-family: var(--sans);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--ivory);
+            background: var(--soft-black);
+            border: 2px solid var(--soft-black);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-gold);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: var(--soft-black);
+            border-color: var(--accent-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--soft-black);
+            padding: 4rem 5% 2rem;
+            text-align: center;
+            color: var(--ivory);
+        }
+
+        .footer-masthead {
+            text-align: center;
+            padding-bottom: 3rem;
+            border-bottom: 2px solid var(--ivory);
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-family: var(--display);
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--ivory);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            font-family: var(--body);
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--warm-grey);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            text-align: left;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-section-title {
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            font-family: var(--body);
+            font-size: 0.9rem;
+            font-weight: 300;
+            text-decoration: none;
+            color: var(--ivory);
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-social a {
+            color: var(--ivory);
+            font-size: 1.3rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(250, 247, 242, 0.2);
+            font-family: var(--sans);
+            font-size: 0.65rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--warm-grey);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--charcoal);
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .featured-content {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-text {
+                columns: 1;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image-col {
+                position: static;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+            .gallery-item:nth-child(1) { 
+                grid-column: span 6;
+                grid-row: span 1;
+            }
+            .gallery-item:nth-child(2) { 
+                grid-column: span 3;
+            }
+            .gallery-item:nth-child(3) { 
+                grid-column: span 3;
+            }
+            .gallery-item:nth-child(4) { 
+                grid-column: span 6;
+            }
+            .gallery-item:nth-child(5) { 
+                grid-column: span 6;
+            }
+            .gallery-item:nth-child(6) { 
+                grid-column: span 6;
+            }
+
+            .testimonial {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-section {
+                align-items: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 968px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            .nav-container {
+                width: 100%;
+            }
+
+            .issue-date {
+                display: none;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                border-left: 2px solid var(--accent-gold);
+                padding-left: 0.75rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 80%;
+                max-width: 350px;
+                background: var(--ivory);
+                flex-direction: column;
+                padding: 6rem 2rem;
+                gap: 2rem;
+                transition: right 0.4s ease;
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+                border-left: 3px solid var(--soft-black);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .hero-edition {
+                font-size: 0.55rem;
+                padding: 0.4rem 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+                padding-left: 1.5rem;
+                border-left: 2px solid var(--accent-gold);
+            }
+
+            .section-number,
+            .services-number,
+            .gallery-number,
+            .testimonials-number,
+            .contact-number {
+                font-size: 4rem;
+            }
+
+            .about-image {
+                height: 400px;
+            }
+
+            .services,
+            .gallery,
+            .testimonials,
+            .contact,
+            .featured-story {
+                padding: 5rem 5%;
+            }
+
+            .pull-quote {
+                padding: 2rem 1.5rem;
+            }
+
+            .pull-quote-text {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 0.95rem;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+
+            .featured-headline,
+            .services-title,
+            .gallery-title,
+            .testimonials-title,
+            .contact-title {
+                font-size: 2rem;
+            }
+
+            .about-title {
+                font-size: 1.8rem;
+            }
+
+            .featured-deck,
+            .services-subtitle,
+            .gallery-deck,
+            .testimonials-deck {
+                font-size: 1rem;
+            }
+
+            .testimonial-author {
+                font-size: 1.5rem;
+            }
+
+            .testimonial-quote {
+                font-size: 1.1rem;
+                padding-left: 1rem;
+            }
+
+            .footer-logo {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:nth-child(n) { 
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .gallery-item img {
+                min-height: 250px;
+            }
+        }
+
+        /* Scroll Animation Observer */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .scroll-reveal.active {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="issue-date">Est. 2026</div>
+                <div class="logo">Cassidy Danae</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://www.instagram.com/cassidydanae.photo" target="_blank" aria-label="Instagram">✦</a>
+                <a href="https://www.facebook.com/cassidydphoto" target="_blank" aria-label="Facebook">✧</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-edition">Photography Edition • 2026</p>
+            <p class="hero-subtitle">Michigan-Based • Documenting Worldwide</p>
+            <h1 class="hero-title">Cassidy<br>Danae</h1>
+            <p class="hero-tagline">Where intimate moments become timeless art. Specializing in destination weddings and elopements that capture the raw, unscripted beauty of your celebration.</p>
+            <p class="hero-byline">Destination Wedding Photography</p>
+        </div>
+    </section>
+
+    <!-- Featured Story Section -->
+    <section id="featured" class="featured-story">
+        <div class="featured-container">
+            <div class="featured-header">
+                <p class="featured-category">Featured Story</p>
+                <h2 class="featured-headline">The Art of Being Present</h2>
+                <p class="featured-deck">How documenting love stories across continents taught me that the best photographs happen when couples forget the camera exists.</p>
+            </div>
+
+            <div class="featured-content">
+                <div class="featured-main">
+                    <img src="https://static.wixstatic.com/media/09e894_b4a4fdd9d2c44718b34f47f5ff791513~mv2.jpg/v1/fill/w_1000,h_675,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_b4a4fdd9d2c44718b34f47f5ff791513~mv2.jpg" alt="Santorini boat elopement" class="featured-image-large">
+                    <p class="featured-caption">A couple shares an intimate moment aboard a traditional boat in Santorini. Photo: Cassidy Danae, 2024</p>
+                    
+                    <div class="featured-text">
+                        <p>Photography chose me long before I chose it. Growing up in Michigan, I was the kid always carrying a disposable camera, documenting everything from family dinners to the changing seasons along Lake Michigan. But it wasn't until I photographed my first wedding that I understood what I was really meant to capture: not just images, but the feeling of a moment.</p>
+                        
+                        <p>Today, my work takes me from the volcanic cliffs of Santorini to intimate barn ceremonies in the Midwest. Each destination brings its own challenges and magic, but the core of what I do remains unchanged. I'm there to document the authentic moments—the nervous laughter before walking down the aisle, the way your partner looks at you when they think no one's watching, the tears your father tries to hide during his speech.</p>
+                        
+                        <p>The couples I work with aren't looking for posed perfection. They want their real story told. They want to remember how it felt, not just how it looked. That's why I approach each wedding as a journalist would approach a story—observing, anticipating, being present but never intrusive. My camera becomes invisible, and what remains is pure, unfiltered emotion.</p>
+                    </div>
+                </div>
+
+                <div class="featured-sidebar">
+                    <div class="pull-quote">
+                        <p class="pull-quote-text">I'm not just capturing moments. I'm preserving the feeling of the day.</p>
+                    </div>
+
+                    <div class="sidebar-stat">
+                        <div class="stat-number">87+</div>
+                        <div class="stat-label">Weddings Documented</div>
+                    </div>
+
+                    <img src="https://static.wixstatic.com/media/09e894_4aab25e26f1d4f4284ae2c45142e3661~mv2.jpg/v1/fill/w_500,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_4aab25e26f1d4f4284ae2c45142e3661~mv2.jpg" alt="Wedding detail" class="sidebar-image">
+
+                    <div class="sidebar-stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Countries Visited</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image-col">
+                <img src="https://static.wixstatic.com/media/2b4383_a1303dd5071e453b9c300f0660904e42~mv2.jpg/v1/fill/w_520,h_810,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_1149.jpg" alt="Cassidy portrait" class="about-image">
+                <p class="image-credit">Self Portrait • Michigan, 2024</p>
+            </div>
+            <div class="about-content">
+                <div class="section-number">01</div>
+                <p class="section-label">Profile</p>
+                <h2 class="about-title">Meet Your Third Wheel</h2>
+                <p class="about-text">
+                    I'm the gal with the camera, your dance floor pal, the tissue holder, finder of the hidden bustle buttons, and the one saying "everything is FINEEE" when your day is running slightly behind schedule. Believe me, we find and make up time elsewhere. I. GOT. YOU.
+                </p>
+                <p class="about-text">
+                    When I'm not photographing love stories around the world, you'll find me obsessed with a good grilled cheese, wrapped in cozy blankets with Ben & Jerry's, binging The Office for the hundredth time, or planning my next travel adventure with my fur-babes: Stella, Beau, Hammy, and Rosie.
+                </p>
+                <div class="about-highlight">
+                    <p>But mostly? I'm here to capture the real, unscripted moments—the ones you'll want to remember forever. The belly laughs, the happy tears, the way your partner looks at you when they think no one's watching. Those are the moments that matter.</p>
+                </div>
+                <p class="about-text">
+                    My approach is simple: I treat your wedding day like the important piece of history it is. I'm part photojournalist, part hype person, and entirely devoted to making sure you feel comfortable, supported, and completely yourself from start to finish.
+                </p>
+                <p class="signature">— Cass</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <div class="services-header">
+                <div class="services-number">02</div>
+                <h2 class="services-title">Services</h2>
+                <p class="services-subtitle">Tailored experiences for your unique celebration</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-number="01">
+                    <div class="service-icon">♡</div>
+                    <h3 class="service-title">Weddings</h3>
+                    <p class="service-description">
+                        Full-day coverage documenting every moment from getting ready to the last dance. I'll be your calm presence throughout the day, ensuring nothing is missed while you stay present and enjoy every second.
+                    </p>
+                </div>
+                <div class="service-card" data-number="02">
+                    <div class="service-icon">✈</div>
+                    <h3 class="service-title">Elopements</h3>
+                    <p class="service-description">
+                        Intimate ceremonies in stunning locations. Whether it's a mountaintop, secret beach, or the streets of a European city, I'll travel anywhere to capture your story authentically and beautifully.
+                    </p>
+                </div>
+                <div class="service-card" data-number="03">
+                    <div class="service-icon">✧</div>
+                    <h3 class="service-title">Engagements</h3>
+                    <p class="service-description">
+                        Relaxed sessions designed to capture your connection and chemistry. Perfect for getting comfortable in front of the camera before your big day, and they make wonderful save-the-date materials.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="work" class="gallery">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <div class="gallery-number">03</div>
+                <h2 class="gallery-title">Portfolio</h2>
+                <p class="gallery-deck">A curated selection of recent wedding and elopement photography</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://static.wixstatic.com/media/09e894_e038d599b6cc4b1a9841abcce39a3f03~mv2.jpg/v1/fill/w_800,h_1200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_e038d599b6cc4b1a9841abcce39a3f03~mv2.jpg" alt="Santorini elopement">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Santorini Elopement</p>
+                        <p class="gallery-location">Greece • 2024</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://static.wixstatic.com/media/09e894_4aab25e26f1d4f4284ae2c45142e3661~mv2.jpg/v1/fill/w_500,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_4aab25e26f1d4f4284ae2c45142e3661~mv2.jpg" alt="Destination wedding">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Coastal Celebration</p>
+                        <p class="gallery-location">Mediterranean • 2024</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://static.wixstatic.com/media/09e894_a1b19af097384bedbf98e4126b9af23e~mv2.jpg/v1/fill/w_500,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_a1b19af097384bedbf98e4126b9af23e~mv2.jpg" alt="Intimate ceremony">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Intimate Vows</p>
+                        <p class="gallery-location">Private Estate • 2024</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://static.wixstatic.com/media/09e894_089773e8d6354ae98a010b7afeefb565~mv2.jpg/v1/fill/w_500,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_089773e8d6354ae98a010b7afeefb565~mv2.jpg" alt="Seaside celebration">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Seaside Romance</p>
+                        <p class="gallery-location">Greek Islands • 2024</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://static.wixstatic.com/media/09e894_98aadd32e320485c85aea0344a512357~mv2.jpg/v1/fill/w_700,h_467,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_98aadd32e320485c85aea0344a512357~mv2.jpg" alt="Golden hour portraits">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Golden Hour</p>
+                        <p class="gallery-location">Sunset Session • 2024</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://static.wixstatic.com/media/09e894_f1378db8455742f79df5a970595e0ce2~mv2.jpg/v1/crop/x_26,y_0,w_3952,h_6000/fill/w_700,h_1067,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_7771.jpg" alt="Editorial portraits">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Editorial Love</p>
+                        <p class="gallery-location">Destination Wedding • 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <div class="testimonials-number">04</div>
+                <h2 class="testimonials-title">Client Stories</h2>
+                <p class="testimonials-deck">In their own words: what couples say about working with Cassidy Danae Photography</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-meta">
+                        <h3 class="testimonial-author">Sarah + Tyler</h3>
+                        <p class="testimonial-date">Married • October 2024</p>
+                        <p class="testimonial-location">Traverse City, Michigan</p>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-quote">
+                            Cassidy made us feel calm, supported, and completely ourselves from start to finish. She has this incredible ability to be everywhere at once while somehow staying invisible. We were so wrapped up in the day that we forgot she was even there—and then we got our photos back and realized she'd captured every single moment we didn't want to miss. The images are stunning, but more than that, they feel like us. Real, honest, and full of joy.
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-meta">
+                        <h3 class="testimonial-author">Katie + Dean</h3>
+                        <p class="testimonial-date">Married • June 2024</p>
+                        <p class="testimonial-location">Santorini, Greece</p>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-quote">
+                            Where do I begin? Cassidy is an amazing photographer and person. She not only produces beautiful images, but makes the experience incredible too. From our first call to the moment we received our gallery, she was supportive, encouraging, and so much fun to be around. She understood our vision completely and delivered images that exceeded every expectation. If you're considering her for your wedding—stop considering and just book her. You won't regret it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-number">05</div>
+            <h2 class="contact-title">Let's Create<br>Something Beautiful</h2>
+            <p class="contact-text">
+                Ready to start planning your dream wedding or elopement? I'd love to hear your story, learn about your vision, and create something timeless together. Every love story deserves to be told beautifully.
+            </p>
+            <a href="https://www.cassidydanaephoto.com/contact-8" class="cta-button">Inquire Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-masthead">
+            <div class="footer-logo">Cassidy Danae</div>
+            <p class="footer-tagline">Destination Wedding Photography</p>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 class="footer-section-title">Navigate</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-section-title">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="#work">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://www.cassidydanaephoto.com/blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-section-title">Connect</h4>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/cassidydanae.photo" target="_blank" aria-label="Instagram">✦</a>
+                    <a href="https://www.facebook.com/cassidydphoto" target="_blank" aria-label="Facebook">✧</a>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="mailto:hello@cassidydanae.com">hello@cassidydanae.com</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Cassidy Danae Photography. All Rights Reserved. • Michigan-Based, Worldwide Services</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(250, 247, 242, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+            } else {
+                nav.style.background = 'rgba(250, 247, 242, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
