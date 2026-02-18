@@ -1,52 +1,24 @@
 {
-  "hero_edition": "Editorial stories with heart - 2026",
-  "hero_subtitle": "Michigan-based - passport-ready",
+  "pull_quote": "I'm not just capturing moments. I'm preserving the feeling of the day.",
+  "about_highlight": "But mostly? I'm here to capture the real, unscripted moments-the ones you'll want to remember forever. The belly laughs, the happy tears, the way your partner looks at you when they think no one's watching. Those are the moments that matter.",
+  "sidebar_image_alt": "Wedding detail",
+  "featured_headline": "The Art of Being Present",
+  "about_signature": "- Cass",
+  "about_title": "Meet Your Third Wheel",
+  "contact_button_link": "https://www.cassidydanaephoto.com/contact-8",
+  "about_image": "https://static.wixstatic.com/media/2b4383_a1303dd5071e453b9c300f0660904e42~mv2.jpg/v1/fill/w_520,h_810,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_1149.jpg",
+  "stat_countries": "12",
+  "hero_tagline": "For couples who care less about perfect posing and more about real connection, deep belly laughs, and photos that feel exactly like them.",
+  "featured_image": "https://static.wixstatic.com/media/09e894_b4a4fdd9d2c44718b34f47f5ff791513~mv2.jpg/v1/fill/w_1000,h_675,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_b4a4fdd9d2c44718b34f47f5ff791513~mv2.jpg",
+  "stat_weddings": "87+",
+  "footer_tagline": "Destination Wedding Photography",
+  "contact_text": "Tell me your story, your wild ideas, and the part you are most excited for. I will help you feel comfortable, present, and fully yourself while we create photos that feel like home.",
+  "about_image_credit": "Self Portrait - Michigan, 2024",
+  "featured_category": "From the Journal",
+  "hero_byline": "Destination wedding photography, with personality",
   "hero_title_line1": "Cassidy",
   "hero_title_line2": "Danae",
-  "hero_tagline": "For couples who care less about perfect posing and more about real connection, deep belly laughs, and photos that feel exactly like them.",
-  "hero_byline": "Destination wedding photography, with personality",
-  "featured_category": "From the Journal",
-  "featured_headline": "The Art of Being Present",
-  "featured_deck": "How documenting love stories across continents taught me that the best photographs happen when couples forget the camera exists.",
-  "featured_image": "https://static.wixstatic.com/media/09e894_b4a4fdd9d2c44718b34f47f5ff791513~mv2.jpg/v1/fill/w_1000,h_675,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_b4a4fdd9d2c44718b34f47f5ff791513~mv2.jpg",
-  "featured_image_alt": "Santorini boat elopement",
-  "featured_caption": "A couple shares an intimate moment aboard a traditional boat in Santorini. Photo: Cassidy Danae, 2024",
   "featured_p1": "Photography chose me long before I chose it. Growing up in Michigan, I was the kid always carrying a disposable camera, documenting everything from family dinners to the changing seasons along Lake Michigan. But it wasn't until I photographed my first wedding that I understood what I was really meant to capture: not just images, but the feeling of a moment.",
-  "featured_p2": "Today, my work takes me from the volcanic cliffs of Santorini to intimate barn ceremonies in the Midwest. Each destination brings its own challenges and magic, but the core of what I do remains unchanged. I'm there to document the authentic moments-the nervous laughter before walking down the aisle, the way your partner looks at you when they think no one's watching, the tears your father tries to hide during his speech.",
-  "featured_p3": "The couples I work with aren't looking for posed perfection. They want their real story told. They want to remember how it felt, not just how it looked. That's why I approach each wedding as a journalist would approach a story-observing, anticipating, being present but never intrusive. My camera becomes invisible, and what remains is pure, unfiltered emotion.",
-  "pull_quote": "I'm not just capturing moments. I'm preserving the feeling of the day.",
-  "stat_weddings": "87+",
-  "stat_countries": "12",
-  "sidebar_image": "https://static.wixstatic.com/media/09e894_4aab25e26f1d4f4284ae2c45142e3661~mv2.jpg/v1/fill/w_500,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_4aab25e26f1d4f4284ae2c45142e3661~mv2.jpg",
-  "sidebar_image_alt": "Wedding detail",
-  "about_title": "Meet Your Third Wheel",
-  "about_p1": "I'm the gal with the camera, your dance floor pal, the tissue holder, finder of the hidden bustle buttons, and the one saying \"everything is FINEEE\" when your day is running slightly behind schedule. Believe me, we find and make up time elsewhere. I. GOT. YOU.",
-  "about_p2": "When I'm not photographing love stories around the world, you'll find me obsessed with a good grilled cheese, wrapped in cozy blankets with Ben & Jerry's, binging The Office for the hundredth time, or planning my next travel adventure with my fur-babes: Stella, Beau, Hammy, and Rosie.",
-  "about_highlight": "But mostly? I'm here to capture the real, unscripted moments-the ones you'll want to remember forever. The belly laughs, the happy tears, the way your partner looks at you when they think no one's watching. Those are the moments that matter.",
-  "about_p3": "My approach is simple: I treat your wedding day like the important piece of history it is. I'm part photojournalist, part hype person, and entirely devoted to making sure you feel comfortable, supported, and completely yourself from start to finish.",
-  "about_signature": "- Cass",
-  "about_image": "https://static.wixstatic.com/media/2b4383_a1303dd5071e453b9c300f0660904e42~mv2.jpg/v1/fill/w_520,h_810,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_1149.jpg",
-  "about_image_alt": "Cassidy portrait",
-  "about_image_credit": "Self Portrait - Michigan, 2024",
-  "services_subtitle": "Built around your vibe, your people, and your pace",
-  "services": [
-    {
-      "icon": "♡",
-      "title": "Weddings",
-      "description": "Full-day coverage documenting every moment from getting ready to the last dance. I'll be your calm presence throughout the day, ensuring nothing is missed while you stay present and enjoy every second."
-    },
-    {
-      "icon": "✈",
-      "title": "Elopements",
-      "description": "Intimate ceremonies in stunning locations. Whether it's a mountaintop, secret beach, or the streets of a European city, I'll travel anywhere to capture your story authentically and beautifully."
-    },
-    {
-      "icon": "✧",
-      "title": "Engagements",
-      "description": "Relaxed sessions designed to capture your connection and chemistry. Perfect for getting comfortable in front of the camera before your big day, and they make wonderful save-the-date materials."
-    }
-  ],
-  "gallery_deck": "A curated selection of recent wedding and elopement photography",
   "gallery_items": [
     {
       "title": "Santorini Elopement",
@@ -85,7 +57,13 @@
       "alt": "Editorial portraits"
     }
   ],
+  "about_image_alt": "Cassidy portrait",
+  "featured_p2": "Today, my work takes me from the volcanic cliffs of Santorini to intimate barn ceremonies in the Midwest. Each destination brings its own challenges and magic, but the core of what I do remains unchanged. I'm there to document the authentic moments-the nervous laughter before walking down the aisle, the way your partner looks at you when they think no one's watching, the tears your father tries to hide during his speech.",
+  "about_p1": "I'm the gal with the camera, your dance floor pal, the tissue holder, finder of the hidden bustle buttons, and the one saying \"everything is FINEEE\" when your day is running slightly behind schedule. Believe me, we find and make up time elsewhere. I. GOT. YOU.",
+  "featured_image_alt": "Santorini boat elopement",
   "testimonials_deck": "What it actually feels like to have me in your corner on wedding day",
+  "featured_p3": "The couples I work with aren't looking for posed perfection. They want their real story told. They want to remember how it felt, not just how it looked. That's why I approach each wedding as a journalist would approach a story-observing, anticipating, being present but never intrusive. My camera becomes invisible, and what remains is pure, unfiltered emotion.",
+  "about_p2": "When I'm not photographing love stories around the world, you'll find me obsessed with a good grilled cheese, wrapped in cozy blankets with Ben & Jerry's, binging The Office for the hundredth time, or planning my next travel adventure with my fur-babes: Stella, Beau, Hammy, and Rosie.",
   "testimonials": [
     {
       "author": "Sarah + Tyler",
@@ -100,12 +78,34 @@
       "quote": "Where do I begin? Cassidy is an amazing photographer and person. She not only produces beautiful images, but makes the experience incredible too. From our first call to the moment we received our gallery, she was supportive, encouraging, and so much fun to be around. She understood our vision completely and delivered images that exceeded every expectation. If you're considering her for your wedding-stop considering and just book her. You won't regret it."
     }
   ],
+  "featured_caption": "A couple shares an intimate moment aboard a traditional boat in Santorini. Photo: Cassidy Danae, 2024",
+  "about_p3": "My approach is simple: I treat your wedding day like the important piece of history it is. I'm part photojournalist, part hype person, and entirely devoted to making sure you feel comfortable, supported, and completely yourself from start to finish.",
+  "gallery_deck": "A curated selection of recent wedding and elopement photography",
   "contact_title_line1": "Let's Make",
   "contact_title_line2": "Some Magic",
-  "contact_text": "Tell me your story, your wild ideas, and the part you are most excited for. I will help you feel comfortable, present, and fully yourself while we create photos that feel like home.",
-  "contact_button_text": "Inquire Now",
-  "contact_button_link": "https://www.cassidydanaephoto.com/contact-8",
-  "footer_tagline": "Destination Wedding Photography",
+  "sidebar_image": "https://static.wixstatic.com/media/09e894_4aab25e26f1d4f4284ae2c45142e3661~mv2.jpg/v1/fill/w_500,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/09e894_4aab25e26f1d4f4284ae2c45142e3661~mv2.jpg",
   "footer_email": "hello@cassidydanae.com",
-  "footer_bottom_text": "© 2026 Cassidy Danae Photography. All Rights Reserved. - Michigan-Based, Worldwide Services"
+  "hero_edition": "Test Test",
+  "services_subtitle": "Built around your vibe, your people, and your pace",
+  "featured_deck": "How documenting love stories across continents taught me that the best photographs happen when couples forget the camera exists.",
+  "contact_button_text": "Inquire Now",
+  "footer_bottom_text": "© 2026 Cassidy Danae Photography. All Rights Reserved. - Michigan-Based, Worldwide Services",
+  "hero_subtitle": "Michigan-based - passport-ready",
+  "services": [
+    {
+      "icon": "♡",
+      "title": "Weddings",
+      "description": "Full-day coverage documenting every moment from getting ready to the last dance. I'll be your calm presence throughout the day, ensuring nothing is missed while you stay present and enjoy every second."
+    },
+    {
+      "icon": "✈",
+      "title": "Elopements",
+      "description": "Intimate ceremonies in stunning locations. Whether it's a mountaintop, secret beach, or the streets of a European city, I'll travel anywhere to capture your story authentically and beautifully."
+    },
+    {
+      "icon": "✧",
+      "title": "Engagements",
+      "description": "Relaxed sessions designed to capture your connection and chemistry. Perfect for getting comfortable in front of the camera before your big day, and they make wonderful save-the-date materials."
+    }
+  ]
 }
