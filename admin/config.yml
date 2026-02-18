@@ -6,42 +6,79 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "weddings"
-    label: "Weddings"
-    folder: "content/weddings"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: "Couple Names"
-        name: "title"
-        widget: "string"
-      - label: "Location"
-        name: "location"
-        widget: "string"
-      - label: "Date"
-        name: "date"
-        widget: "string"
-      - label: "Category"
-        name: "category"
-        widget: "select"
-        options: 
-          - "Destination"
-          - "Elopement"
-          - "Michigan"
-          - "Intimate"
-      - label: "Featured Image"
-        name: "featured_image"
-        widget: "image"
-      - label: "Story"
-        name: "story"
-        widget: "markdown"
-      - label: "Personal Note"
-        name: "personal_note"
-        widget: "text"
-      - label: "Gallery Images"
-        name: "gallery"
-        widget: "list"
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "homepage"
+        label: "Homepage"
+        file: "content/site/homepage.json"
         fields:
-          - label: "Image"
-            name: "image"
-            widget: "image"
+          - { label: "Hero Edition", name: "hero_edition", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
+          - { label: "Hero Title Line 1", name: "hero_title_line1", widget: "string" }
+          - { label: "Hero Title Line 2", name: "hero_title_line2", widget: "string" }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "text" }
+          - { label: "Hero Byline", name: "hero_byline", widget: "string" }
+          - { label: "Featured Category", name: "featured_category", widget: "string" }
+          - { label: "Featured Headline", name: "featured_headline", widget: "string" }
+          - { label: "Featured Deck", name: "featured_deck", widget: "text" }
+          - { label: "Featured Image URL", name: "featured_image", widget: "string" }
+          - { label: "Featured Image Alt", name: "featured_image_alt", widget: "string" }
+          - { label: "Featured Caption", name: "featured_caption", widget: "string" }
+          - { label: "Featured Paragraph 1", name: "featured_p1", widget: "text" }
+          - { label: "Featured Paragraph 2", name: "featured_p2", widget: "text" }
+          - { label: "Featured Paragraph 3", name: "featured_p3", widget: "text" }
+          - { label: "Pull Quote", name: "pull_quote", widget: "text" }
+          - { label: "Weddings Count", name: "stat_weddings", widget: "string" }
+          - { label: "Countries Count", name: "stat_countries", widget: "string" }
+          - { label: "Sidebar Image URL", name: "sidebar_image", widget: "string" }
+          - { label: "Sidebar Image Alt", name: "sidebar_image_alt", widget: "string" }
+          - { label: "About Title", name: "about_title", widget: "string" }
+          - { label: "About Paragraph 1", name: "about_p1", widget: "text" }
+          - { label: "About Paragraph 2", name: "about_p2", widget: "text" }
+          - { label: "About Highlight", name: "about_highlight", widget: "text" }
+          - { label: "About Paragraph 3", name: "about_p3", widget: "text" }
+          - { label: "About Signature", name: "about_signature", widget: "string" }
+          - { label: "About Image URL", name: "about_image", widget: "string" }
+          - { label: "About Image Alt", name: "about_image_alt", widget: "string" }
+          - { label: "About Image Credit", name: "about_image_credit", widget: "string" }
+          - { label: "Services Subtitle", name: "services_subtitle", widget: "string" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            min: 3
+            max: 3
+            fields:
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Gallery Deck", name: "gallery_deck", widget: "string" }
+          - label: "Gallery Items"
+            name: "gallery_items"
+            widget: "list"
+            min: 6
+            max: 6
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - { label: "Image Alt", name: "alt", widget: "string" }
+          - { label: "Testimonials Deck", name: "testimonials_deck", widget: "string" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            min: 2
+            max: 2
+            fields:
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+          - { label: "Contact Title Line 1", name: "contact_title_line1", widget: "string" }
+          - { label: "Contact Title Line 2", name: "contact_title_line2", widget: "string" }
+          - { label: "Contact Text", name: "contact_text", widget: "text" }
+          - { label: "Contact Button Text", name: "contact_button_text", widget: "string" }
+          - { label: "Contact Button Link", name: "contact_button_link", widget: "string" }
+          - { label: "Footer Tagline", name: "footer_tagline", widget: "string" }
+          - { label: "Footer Email", name: "footer_email", widget: "string" }
+          - { label: "Footer Bottom Text", name: "footer_bottom_text", widget: "string" }

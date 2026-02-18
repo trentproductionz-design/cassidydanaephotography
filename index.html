@@ -9,12 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --ivory: #FAF7F2;
-            --charcoal: #2B2B2B;
-            --soft-black: #1A1A1A;
-            --warm-grey: #8B8680;
-            --accent-gold: #C9A96E;
-            --newsprint: #E8E4DB;
+            --ivory: #efe5d8;
+            --charcoal: #372d27;
+            --soft-black: #211a16;
+            --warm-grey: #7f6f62;
+            --accent-gold: #6f9b90;
+            --newsprint: #e2d5c3;
+            --accent-earth: #a88468;
             --serif: 'Cormorant Garamond', serif;
             --display: 'Playfair Display', serif;
             --body: 'EB Garamond', serif;
@@ -29,10 +30,49 @@
 
         body {
             font-family: var(--sans);
-            background: var(--ivory);
+            background: #2b241f;
             color: var(--charcoal);
             overflow-x: hidden;
             line-height: 1.6;
+        }
+
+        nav,
+        section,
+        footer {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-bg-fixed {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .section-bg-layer {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            filter: saturate(0.86) contrast(0.93) brightness(0.88);
+        }
+
+        .section-bg-layer.is-active {
+            opacity: 1;
+        }
+
+        .section-bg-fixed::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(33, 26, 22, 0.28), rgba(33, 26, 22, 0.56)),
+                radial-gradient(circle at 22% 22%, rgba(111, 155, 144, 0.12), transparent 45%),
+                repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.014) 0 1px, transparent 1px 3px);
         }
 
         /* Smooth scroll */
@@ -47,8 +87,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(250, 247, 242, 0.98);
-            backdrop-filter: blur(10px);
+            background: rgba(246, 239, 229, 0.94);
             padding: 1.5rem 3rem;
             border-bottom: 2px solid var(--soft-black);
             transition: all 0.3s ease;
@@ -153,12 +192,42 @@
             border-bottom: 3px solid var(--soft-black);
         }
 
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(120deg, rgba(15, 13, 11, 0.42), rgba(15, 13, 11, 0.14)),
+                url('./DSC_7771.jpg');
+            background-size: cover;
+            background-position: center 40%;
+            transform: scale(1.04);
+            z-index: 0;
+            filter: saturate(0.82) contrast(0.95);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(250, 247, 242, 0.24), rgba(250, 247, 242, 0.48));
+            z-index: 1;
+        }
+
         .hero-content {
             text-align: center;
             z-index: 2;
             padding: 2rem;
             max-width: 1200px;
             animation: fadeInUp 1.2s ease-out;
+            background: rgba(239, 229, 216, 0.76);
+            border: 1px solid rgba(55, 45, 39, 0.26);
+            box-shadow: 0 18px 38px rgba(33, 26, 22, 0.24);
+        }
+
+        .scroll-fade-content {
+            will-change: opacity, transform;
+            transform-origin: center top;
         }
 
         .hero-edition {
@@ -199,7 +268,7 @@
         }
 
         .hero-tagline {
-            font-family: var(--body);
+            font-family: 'EB Garamond', serif;
             font-size: clamp(1.3rem, 2.5vw, 1.8rem);
             font-weight: 400;
             font-style: italic;
@@ -227,7 +296,7 @@
 
         /* Featured Story Section - Editorial Layout */
         .featured-story {
-            background: var(--ivory);
+            background: rgba(250, 247, 242, 0.88);
             padding: 8rem 5%;
             border-bottom: 3px solid var(--soft-black);
         }
@@ -399,7 +468,7 @@
         /* About Section */
         .about {
             padding: 8rem 5%;
-            background: var(--newsprint);
+            background: rgba(232, 228, 219, 0.86);
             border-bottom: 3px solid var(--soft-black);
         }
 
@@ -527,7 +596,7 @@
 
         /* Services Section */
         .services {
-            background: var(--ivory);
+            background: rgba(250, 247, 242, 0.88);
             padding: 8rem 5%;
             border-bottom: 3px solid var(--soft-black);
         }
@@ -644,7 +713,7 @@
         /* Gallery Section */
         .gallery {
             padding: 8rem 5%;
-            background: var(--soft-black);
+            background: rgba(26, 26, 26, 0.83);
             color: var(--ivory);
             border-bottom: 3px solid var(--accent-gold);
         }
@@ -685,6 +754,25 @@
             font-style: italic;
             color: var(--warm-grey);
             margin-top: 1rem;
+        }
+
+        .gallery-page-link {
+            display: inline-block;
+            margin-top: 1.4rem;
+            font-family: var(--sans);
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--ivory);
+            text-decoration: none;
+            border: 1px solid var(--ivory);
+            padding: 0.8rem 1.2rem;
+            transition: all 0.25s ease;
+        }
+
+        .gallery-page-link:hover {
+            background: var(--ivory);
+            color: var(--soft-black);
         }
 
         .gallery-grid {
@@ -780,7 +868,7 @@
 
         /* Testimonials */
         .testimonials {
-            background: var(--newsprint);
+            background: rgba(232, 228, 219, 0.86);
             padding: 8rem 5%;
             border-bottom: 3px solid var(--soft-black);
         }
@@ -904,7 +992,7 @@
 
         /* Contact Section */
         .contact {
-            background: var(--ivory);
+            background: rgba(250, 247, 242, 0.9);
             padding: 8rem 5%;
             text-align: center;
             border-bottom: 3px solid var(--soft-black);
@@ -953,8 +1041,8 @@
             text-transform: uppercase;
             text-decoration: none;
             color: var(--ivory);
-            background: var(--soft-black);
-            border: 2px solid var(--soft-black);
+            background: var(--accent-earth);
+            border: 2px solid var(--accent-earth);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -1367,7 +1455,7 @@
     <nav>
         <div class="nav-container">
             <div class="nav-left">
-                <div class="issue-date">Est. 2026</div>
+                <div class="issue-date">Est. 2019</div>
                 <div class="logo">Cassidy Danae</div>
             </div>
             <ul class="nav-links">
@@ -1375,7 +1463,7 @@
                 <li><a href="#featured">Featured</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#work">Portfolio</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1391,22 +1479,27 @@
         </div>
     </nav>
 
+    <div class="section-bg-fixed" aria-hidden="true">
+        <div class="section-bg-layer section-bg-layer-a is-active"></div>
+        <div class="section-bg-layer section-bg-layer-b"></div>
+    </div>
+
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" data-bg="./DSC_7771.jpg">
         <div class="hero-content">
-            <p class="hero-edition">Photography Edition • 2026</p>
-            <p class="hero-subtitle">Michigan-Based • Documenting Worldwide</p>
+            <p class="hero-edition">Editorial stories with heart - 2026</p>
+            <p class="hero-subtitle">Michigan-based - passport-ready</p>
             <h1 class="hero-title">Cassidy<br>Danae</h1>
-            <p class="hero-tagline">Where intimate moments become timeless art. Specializing in destination weddings and elopements that capture the raw, unscripted beauty of your celebration.</p>
-            <p class="hero-byline">Destination Wedding Photography</p>
+            <p class="hero-tagline">For couples who care less about perfect posing and more about real connection, deep belly laughs, and photos that feel exactly like them.</p>
+            <p class="hero-byline">Destination wedding photography, with personality</p>
         </div>
     </section>
 
     <!-- Featured Story Section -->
-    <section id="featured" class="featured-story">
+    <section id="featured" class="featured-story" data-bg="./DSC_2752.jpg">
         <div class="featured-container">
             <div class="featured-header">
-                <p class="featured-category">Featured Story</p>
+                <p class="featured-category">From the Journal</p>
                 <h2 class="featured-headline">The Art of Being Present</h2>
                 <p class="featured-deck">How documenting love stories across continents taught me that the best photographs happen when couples forget the camera exists.</p>
             </div>
@@ -1447,7 +1540,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" data-bg="./DSC_0026.jpg">
         <div class="about-container">
             <div class="about-image-col">
                 <img src="https://static.wixstatic.com/media/2b4383_a1303dd5071e453b9c300f0660904e42~mv2.jpg/v1/fill/w_520,h_810,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_1149.jpg" alt="Cassidy portrait" class="about-image">
@@ -1455,7 +1548,7 @@
             </div>
             <div class="about-content">
                 <div class="section-number">01</div>
-                <p class="section-label">Profile</p>
+                <p class="section-label">The Human Side</p>
                 <h2 class="about-title">Meet Your Third Wheel</h2>
                 <p class="about-text">
                     I'm the gal with the camera, your dance floor pal, the tissue holder, finder of the hidden bustle buttons, and the one saying "everything is FINEEE" when your day is running slightly behind schedule. Believe me, we find and make up time elsewhere. I. GOT. YOU.
@@ -1475,12 +1568,12 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="services" data-bg="./DSC_2694.jpg">
         <div class="services-container">
             <div class="services-header">
                 <div class="services-number">02</div>
                 <h2 class="services-title">Services</h2>
-                <p class="services-subtitle">Tailored experiences for your unique celebration</p>
+                <p class="services-subtitle">Built around your vibe, your people, and your pace</p>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-number="01">
@@ -1509,12 +1602,13 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="work" class="gallery">
+    <section id="work" class="gallery" data-bg="./DSC_9279.jpg">
         <div class="gallery-container">
             <div class="gallery-header">
                 <div class="gallery-number">03</div>
                 <h2 class="gallery-title">Portfolio</h2>
                 <p class="gallery-deck">A curated selection of recent wedding and elopement photography</p>
+                <a class="gallery-page-link" href="portfolio.html">Open Full Portfolio</a>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
@@ -1564,12 +1658,12 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials" data-bg="./DSC_2187.jpg">
         <div class="testimonials-container">
             <div class="testimonials-header">
                 <div class="testimonials-number">04</div>
                 <h2 class="testimonials-title">Client Stories</h2>
-                <p class="testimonials-deck">In their own words: what couples say about working with Cassidy Danae Photography</p>
+                <p class="testimonials-deck">What it actually feels like to have me in your corner on wedding day</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial">
@@ -1601,12 +1695,12 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-bg="./DSC_0786.jpg">
         <div class="contact-container">
             <div class="contact-number">05</div>
-            <h2 class="contact-title">Let's Create<br>Something Beautiful</h2>
+            <h2 class="contact-title">Let's Make<br>Some Magic</h2>
             <p class="contact-text">
-                Ready to start planning your dream wedding or elopement? I'd love to hear your story, learn about your vision, and create something timeless together. Every love story deserves to be told beautifully.
+                Tell me your story, your wild ideas, and the part you are most excited for. I will help you feel comfortable, present, and fully yourself while we create photos that feel like home.
             </p>
             <a href="https://www.cassidydanaephoto.com/contact-8" class="cta-button">Inquire Now</a>
         </div>
@@ -1633,7 +1727,7 @@
             <div class="footer-section">
                 <h4 class="footer-section-title">Explore</h4>
                 <ul class="footer-links">
-                    <li><a href="#work">Portfolio</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="https://www.cassidydanaephoto.com/blog">Blog</a></li>
@@ -1667,6 +1761,134 @@
                 }
             });
         }
+
+        // Load editable homepage content from Decap CMS JSON
+        async function loadCmsContent() {
+            try {
+                const response = await fetch('./content/site/homepage.json', { cache: 'no-store' });
+                if (!response.ok) return;
+                const data = await response.json();
+
+                const setText = (selector, value) => {
+                    if (value == null) return;
+                    const el = document.querySelector(selector);
+                    if (el) el.textContent = value;
+                };
+
+                const setHtml = (selector, value) => {
+                    if (value == null) return;
+                    const el = document.querySelector(selector);
+                    if (el) el.innerHTML = value;
+                };
+
+                const setAttr = (selector, attr, value) => {
+                    if (value == null) return;
+                    const el = document.querySelector(selector);
+                    if (el) el.setAttribute(attr, value);
+                };
+
+                setText('.hero-edition', data.hero_edition);
+                setText('.hero-subtitle', data.hero_subtitle);
+                setHtml('.hero-title', `${data.hero_title_line1 || ''}<br>${data.hero_title_line2 || ''}`);
+                setText('.hero-tagline', data.hero_tagline);
+                setText('.hero-byline', data.hero_byline);
+
+                setText('.featured-category', data.featured_category);
+                setText('.featured-headline', data.featured_headline);
+                setText('.featured-deck', data.featured_deck);
+                setAttr('.featured-image-large', 'src', data.featured_image);
+                setAttr('.featured-image-large', 'alt', data.featured_image_alt);
+                setText('.featured-caption', data.featured_caption);
+
+                const featuredParagraphs = document.querySelectorAll('.featured-text p');
+                if (featuredParagraphs[0] && data.featured_p1) featuredParagraphs[0].textContent = data.featured_p1;
+                if (featuredParagraphs[1] && data.featured_p2) featuredParagraphs[1].textContent = data.featured_p2;
+                if (featuredParagraphs[2] && data.featured_p3) featuredParagraphs[2].textContent = data.featured_p3;
+
+                setText('.pull-quote-text', data.pull_quote);
+                setText('.featured-sidebar .sidebar-stat:nth-of-type(1) .stat-number', data.stat_weddings);
+                setText('.featured-sidebar .sidebar-stat:nth-of-type(2) .stat-number', data.stat_countries);
+                setAttr('.sidebar-image', 'src', data.sidebar_image);
+                setAttr('.sidebar-image', 'alt', data.sidebar_image_alt);
+
+                setText('.about-title', data.about_title);
+                const aboutParagraphs = document.querySelectorAll('.about .about-text');
+                if (aboutParagraphs[0] && data.about_p1) aboutParagraphs[0].textContent = data.about_p1;
+                if (aboutParagraphs[1] && data.about_p2) aboutParagraphs[1].textContent = data.about_p2;
+                if (aboutParagraphs[2] && data.about_p3) aboutParagraphs[2].textContent = data.about_p3;
+                setText('.about-highlight p', data.about_highlight);
+                setText('.signature', data.about_signature);
+                setAttr('.about-image', 'src', data.about_image);
+                setAttr('.about-image', 'alt', data.about_image_alt);
+                setText('.image-credit', data.about_image_credit);
+
+                setText('.services-subtitle', data.services_subtitle);
+                const serviceCards = document.querySelectorAll('.services-grid .service-card');
+                if (Array.isArray(data.services)) {
+                    data.services.forEach((service, index) => {
+                        const card = serviceCards[index];
+                        if (!card) return;
+                        const icon = card.querySelector('.service-icon');
+                        const title = card.querySelector('.service-title');
+                        const description = card.querySelector('.service-description');
+                        if (icon && service.icon) icon.textContent = service.icon;
+                        if (title && service.title) title.textContent = service.title;
+                        if (description && service.description) description.textContent = service.description;
+                    });
+                }
+
+                setText('.gallery-deck', data.gallery_deck);
+                const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+                if (Array.isArray(data.gallery_items)) {
+                    data.gallery_items.forEach((item, index) => {
+                        const card = galleryItems[index];
+                        if (!card) return;
+                        const image = card.querySelector('img');
+                        const title = card.querySelector('.gallery-text');
+                        const location = card.querySelector('.gallery-location');
+                        if (image && item.image) image.setAttribute('src', item.image);
+                        if (image && item.alt) image.setAttribute('alt', item.alt);
+                        if (title && item.title) title.textContent = item.title;
+                        if (location && item.location) location.textContent = item.location;
+                    });
+                }
+
+                setText('.testimonials-deck', data.testimonials_deck);
+                const testimonials = document.querySelectorAll('.testimonials-grid .testimonial');
+                if (Array.isArray(data.testimonials)) {
+                    data.testimonials.forEach((item, index) => {
+                        const testimonial = testimonials[index];
+                        if (!testimonial) return;
+                        const author = testimonial.querySelector('.testimonial-author');
+                        const date = testimonial.querySelector('.testimonial-date');
+                        const location = testimonial.querySelector('.testimonial-location');
+                        const quote = testimonial.querySelector('.testimonial-quote');
+                        if (author && item.author) author.textContent = item.author;
+                        if (date && item.date) date.textContent = item.date;
+                        if (location && item.location) location.textContent = item.location;
+                        if (quote && item.quote) quote.textContent = item.quote;
+                    });
+                }
+
+                setHtml('.contact-title', `${data.contact_title_line1 || ''}<br>${data.contact_title_line2 || ''}`);
+                setText('.contact-text', data.contact_text);
+                setText('.cta-button', data.contact_button_text);
+                setAttr('.cta-button', 'href', data.contact_button_link);
+
+                setText('.footer-tagline', data.footer_tagline);
+                setText('.footer-bottom p', data.footer_bottom_text);
+                const footerEmail = document.querySelector('.footer-section .footer-links a[href^="mailto:"]');
+                if (footerEmail && data.footer_email) {
+                    footerEmail.textContent = data.footer_email;
+                    footerEmail.setAttribute('href', `mailto:${data.footer_email}`);
+                }
+            } catch (error) {
+                // Keep existing hardcoded content if CMS content isn't available.
+                console.error('CMS content load skipped:', error);
+            }
+        }
+
+        loadCmsContent();
 
         // Mobile menu toggle
         function toggleMenu() {
@@ -1713,14 +1935,85 @@
             observer.observe(el);
         });
 
+        // Static background photos that switch per section
+        const backgroundHost = document.querySelector('.section-bg-fixed');
+        const bgSections = [...document.querySelectorAll('section[data-bg]')];
+        if (backgroundHost && bgSections.length) {
+            const bgLayers = [...backgroundHost.querySelectorAll('.section-bg-layer')];
+            let activeBgLayer = 0;
+            let activeBgUrl = '';
+
+            const setBackground = (url) => {
+                if (!url || url === activeBgUrl || bgLayers.length < 2) return;
+                const nextLayer = 1 - activeBgLayer;
+                bgLayers[nextLayer].style.backgroundImage = `url("${url}")`;
+                bgLayers[nextLayer].classList.add('is-active');
+                bgLayers[activeBgLayer].classList.remove('is-active');
+                activeBgLayer = nextLayer;
+                activeBgUrl = url;
+            };
+
+            setBackground(bgSections[0].dataset.bg);
+
+            const bgObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) setBackground(entry.target.dataset.bg);
+                });
+            }, {
+                threshold: 0.45,
+                rootMargin: '-20% 0px -20% 0px'
+            });
+
+            bgSections.forEach(section => bgObserver.observe(section));
+        }
+
+        // Fade content out as it scrolls up the page
+        const fadeTargets = [...document.querySelectorAll(
+            '.hero-content, .about-container, .services-container, .testimonials-container, .contact-container'
+        )];
+        if (fadeTargets.length) {
+            fadeTargets.forEach(el => el.classList.add('scroll-fade-content'));
+
+            let fadeTicking = false;
+            const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+            const updateScrollFade = () => {
+                const viewportHeight = window.innerHeight;
+                fadeTargets.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    // Start fading only after a meaningful amount has scrolled past.
+                    const passedTop = Math.max(0, -rect.top);
+                    const fadeStart = Math.min(viewportHeight * 0.7, rect.height * 0.45);
+                    const fadeSpan = Math.max(viewportHeight * 0.45, rect.height * 0.35);
+                    const fadeProgress = clamp((passedTop - fadeStart) / fadeSpan, 0, 1);
+                    const opacity = clamp(1 - (fadeProgress * 0.88), 0.12, 1);
+                    const lift = fadeProgress * 40;
+                    el.style.opacity = opacity.toFixed(3);
+                    el.style.transform = `translate3d(0, ${(-lift).toFixed(2)}px, 0)`;
+                });
+                fadeTicking = false;
+            };
+
+            const requestScrollFade = () => {
+                if (!fadeTicking) {
+                    window.requestAnimationFrame(updateScrollFade);
+                    fadeTicking = true;
+                }
+            };
+
+            window.addEventListener('scroll', requestScrollFade, { passive: true });
+            window.addEventListener('resize', requestScrollFade);
+            requestScrollFade();
+        }
+
         // Navbar background on scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
-                nav.style.background = 'rgba(250, 247, 242, 0.98)';
-                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+                nav.style.background = 'rgba(246, 239, 229, 0.97)';
+                nav.style.boxShadow = '0 2px 20px rgba(43, 36, 31, 0.16)';
             } else {
-                nav.style.background = 'rgba(250, 247, 242, 0.95)';
+                nav.style.background = 'rgba(246, 239, 229, 0.94)';
                 nav.style.boxShadow = 'none';
             }
         });
